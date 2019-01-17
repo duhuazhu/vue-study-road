@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+</head>
+
+<body>
+    <!-- vue控制的这个元素区域就是我们的v -->
+    <div id="app">
+        <p> {{msg}}</p>
+    </div>
+
+
+
+    <script>
+        //注意:我们new出来的这个vm对象就是我们mvvm的里的vm
+        var vm = new Vue({
+            el: '#app', //表示,当我们new的这个Vue实例 要控制页面上的那个区域
+            data: { //data存到的属性是el用到的数据
+                msg: '欢迎学习vue' //通过vue提供的指令很当变的吧数据渲染在页面上 不用手动操作dom了
+            }
+        })
+    </script>
+
+</body>
+
+</html>
