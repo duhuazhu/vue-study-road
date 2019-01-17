@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <p>{{ message }}</p>
-        <input type="text" :value="val+'aaa'" :aaa="val">
+        <input type="button" value="按钮" v-on:click="show">
     </div>
 
     <script>
@@ -19,6 +19,11 @@
             data: {
                 message: 'Hello Vue.js!',
                 val: '我是值'
+            },
+            methods: {
+                show() {
+                    alert('HELLO')
+                }
             }
         })
     </script>
